@@ -7,7 +7,7 @@ echo   OMNILOGISTICS HUB - INSTALACION GLOBAL DE DEPENDENCIAS
 echo ============================================================
 echo.
 
-set SCRIPT_DIR=%~dp0Packages and dependencies
+set "SCRIPT_DIR=%~dp0Packages and dependencies"
 
 echo --^> [1/6] Ejecutando instalacion C#...
 call "%SCRIPT_DIR%\Csharp.bat"
@@ -29,6 +29,6 @@ call "%SCRIPT_DIR%\Ruby.bat"
 
 echo.
 echo ============================================================
-echo   TODAS LAS DEPENDENCIAS SE HAN INSTALADO CORRECTAMENTE
+echo   PROCESO FINALIZADO CORRECTAMENTE
 echo ============================================================
 pause

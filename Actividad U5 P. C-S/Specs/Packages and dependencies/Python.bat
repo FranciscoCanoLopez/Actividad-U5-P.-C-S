@@ -1,17 +1,32 @@
-# Servidor RESTful
-cd python/rest-service
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+@echo off
+echo ===================================================
+echo   Inicializando dependencias de Python 3.11
+echo ===================================================
+
+set "HUB_DIR=%~dp0..\..\HUB\python"
+
+echo [1/3] Configurando venv e instalando paquetes para Python REST...
+cd /d "%HUB_DIR%\rest-service"
+if not exist "venv" python -m venv venv
+call "%HUB_DIR%\rest-service\venv\Scripts\activate.bat"
+pip install --upgrade pip
 pip install fastapi uvicorn pydantic python-jose[cryptography] passlib[bcrypt]
+call deactivate
 
-# Servidor SOAP
-cd ../soap-service
-python -m venv venv
-source venv/bin/activate
-pip install spyne lxml wsgiref
+echo [2/3] Configurando venv e instalando paquetes para Python SOAP...
+cd /d "%HUB_DIR%\soap-service"
+if not exist "venv" python -m venv venv
+call "%HUB_DIR%\soap-service\venv\Scripts\activate.bat"
+pip install --upgrade pip
+pip install spyne lxml
+call deactivate
 
-# Cliente
-cd ../client
-python -m venv venv
-source venv/bin/activate
+echo [3/3] Configurando venv e instalando paquetes para Python Client...
+cd /d "%HUB_DIR%\client"
+if not exist "venv" python -m venv venv
+call "%HUB_DIR%\client\venv\Scripts\activate.bat"
+pip install --upgrade pip
 pip install requests zeep
+call deactivate
+
+echo Finalizado Python.
