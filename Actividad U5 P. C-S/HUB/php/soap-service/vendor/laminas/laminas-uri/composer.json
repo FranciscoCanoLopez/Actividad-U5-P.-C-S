@@ -1,0 +1,50 @@
+{
+    "name": "laminas/laminas-uri",
+    "description": "a component that aids in manipulating and validating \u00bb Uniform Resource Identifiers (URIs)",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "uri"
+    ],
+    "homepage": "https://laminas.dev",
+    "support": {
+        "docs": "https://docs.laminas.dev/laminas-uri/",
+        "issues": "https://github.com/laminas/laminas-uri/issues",
+        "source": "https://github.com/laminas/laminas-uri",
+        "rss": "https://github.com/laminas/laminas-uri/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.5-dev",
+            "dev-develop": "2.6-dev"
+        }
+    },
+    "require": {
+        "php": ">=5.3.23",
+        "laminas/laminas-escaper": "~2.5",
+        "laminas/laminas-validator": "~2.5",
+        "laminas/laminas-zendframework-bridge": "^1.0"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "1.7.*",
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laminas\\Uri\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaminasTest\\Uri\\": "test/"
+        }
+    },
+    "replace": {
+        "zendframework/zend-uri": "self.version"
+    }
+}

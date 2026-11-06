@@ -1,0 +1,56 @@
+{
+    "name": "laminas/laminas-soap",
+    "description": " ",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "soap"
+    ],
+    "homepage": "https://laminas.dev",
+    "support": {
+        "docs": "https://docs.laminas.dev/laminas-soap/",
+        "issues": "https://github.com/laminas/laminas-soap/issues",
+        "source": "https://github.com/laminas/laminas-soap",
+        "rss": "https://github.com/laminas/laminas-soap/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.5-dev",
+            "dev-develop": "2.6-dev"
+        }
+    },
+    "require": {
+        "php": ">=5.3.23",
+        "laminas/laminas-server": "~2.5",
+        "laminas/laminas-stdlib": "~2.5",
+        "laminas/laminas-uri": "~2.5",
+        "laminas/laminas-zendframework-bridge": "^1.0"
+    },
+    "require-dev": {
+        "fabpot/php-cs-fixer": "1.7.*",
+        "laminas/laminas-config": "~2.5",
+        "laminas/laminas-http": "~2.5",
+        "phpunit/phpunit": "~4.0"
+    },
+    "suggest": {
+        "laminas/laminas-http": "Laminas\\Http component"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laminas\\Soap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaminasTest\\Soap\\": "test/"
+        }
+    },
+    "replace": {
+        "zendframework/zend-soap": "self.version"
+    }
+}

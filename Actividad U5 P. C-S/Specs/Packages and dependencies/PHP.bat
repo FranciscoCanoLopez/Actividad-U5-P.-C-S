@@ -7,14 +7,13 @@ set "HUB_DIR=%~dp0..\..\HUB\php"
 
 where composer >nul 2>nul
 if %errorlevel% neq 0 (
-    echo [ADVERTENCIA] 'composer' no esta instalado o no esta en el PATH de Windows.
-    echo Descarga e instala Composer desde https://getcomposer.org/
+    echo [ADVERTENCIA] 'composer' no esta instalado o no esta en el PATH.
     goto END
 )
 
 echo [1/3] Instalando dependencias PHP REST...
 cd /d "%HUB_DIR%\rest-service"
-call composer require slim/slim "^4.0" slim/psr7 firebase/php-jwt zircote/swagger-php --no-interaction
+call composer require slim/slim:4.* slim/psr7 firebase/php-jwt zircote/swagger-php --no-interaction
 
 echo [2/3] Instalando dependencias PHP SOAP...
 cd /d "%HUB_DIR%\soap-service"

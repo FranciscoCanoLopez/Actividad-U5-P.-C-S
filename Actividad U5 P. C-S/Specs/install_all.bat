@@ -1,9 +1,9 @@
 @echo off
-title OmniLogistics Hub - Instalador General de Dependencias
+title HUB - Instalador General de Dependencias
 color 0A
 
 echo ============================================================
-echo   OMNILOGISTICS HUB - INSTALACION GLOBAL DE DEPENDENCIAS
+echo  HUB - INSTALACION GLOBAL DE DEPENDENCIAS
 echo ============================================================
 echo.
 
