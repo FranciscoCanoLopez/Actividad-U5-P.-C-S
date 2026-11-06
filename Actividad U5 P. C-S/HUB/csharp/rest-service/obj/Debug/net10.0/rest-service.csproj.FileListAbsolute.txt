@@ -1,0 +1,9 @@
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.csproj.AssemblyReference.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.AssemblyInfoInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.AssemblyInfo.cs
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.csproj.CoreCompileInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\rest-service\obj\Debug\net10.0\rest-service.sourcelink.json
