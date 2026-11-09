@@ -1,11 +1,466 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Microsoft.Extensions.ObjectPool/8.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Security.Cryptography.Pkcs/10.0.14": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Cryptography.Xml/10.0.14": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": "10.0.14"
+        },
+        "compile": {
+          "lib/net10.0/System.Security.Cryptography.Xml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Security.Cryptography.Xml.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "System.ServiceModel.Http/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ServiceModel.Primitives": "8.1.1"
+        },
+        "compile": {
+          "ref/net8.0/System.ServiceModel.Http.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/System.ServiceModel.Http.dll": {
+            "related": ".pdb"
+          }
+        },
+        "resource": {
+          "lib/net8.0/cs/System.ServiceModel.Http.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/de/System.ServiceModel.Http.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/es/System.ServiceModel.Http.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/fr/System.ServiceModel.Http.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/it/System.ServiceModel.Http.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/System.ServiceModel.Http.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ko/System.ServiceModel.Http.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/pl/System.ServiceModel.Http.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-BR/System.ServiceModel.Http.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net8.0/ru/System.ServiceModel.Http.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/tr/System.ServiceModel.Http.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/zh-Hans/System.ServiceModel.Http.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/System.ServiceModel.Http.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.ServiceModel.Primitives/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ObjectPool": "8.0.10",
+          "System.Security.Cryptography.Xml": "8.0.2"
+        },
+        "compile": {
+          "ref/net8.0/System.ServiceModel.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/System.ServiceModel.Duplex.dll": {
+            "related": ".pdb"
+          },
+          "lib/net8.0/System.ServiceModel.Primitives.dll": {
+            "related": ".pdb"
+          },
+          "lib/net8.0/System.ServiceModel.Security.dll": {
+            "related": ".pdb"
+          },
+          "lib/net8.0/System.ServiceModel.dll": {
+            "related": ".Duplex.pdb;.pdb;.Primitives.pdb;.Security.pdb"
+          }
+        },
+        "resource": {
+          "lib/net8.0/cs/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net8.0/de/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/es/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net8.0/fr/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/it/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net8.0/ja/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net8.0/ko/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net8.0/pl/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net8.0/pt-BR/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net8.0/ru/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net8.0/tr/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net8.0/zh-Hans/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net8.0/zh-Hant/System.ServiceModel.Primitives.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "System.Text.Json/10.0.14": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.Extensions.ObjectPool/8.0.10": {
+      "sha512": "u7gAG7JgxF8VSJUGPSudAcPxOt+ymJKQCSxNRxiuKV+klCQbHljQR75SilpedCTfhPWDhtUwIJpnDVtspr9nMg==",
+      "type": "package",
+      "path": "microsoft.extensions.objectpool/8.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net462/Microsoft.Extensions.ObjectPool.xml",
+        "lib/net8.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/net8.0/Microsoft.Extensions.ObjectPool.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
+        "microsoft.extensions.objectpool.8.0.10.nupkg.sha512",
+        "microsoft.extensions.objectpool.nuspec"
+      ]
+    },
+    "System.Security.Cryptography.Pkcs/10.0.14": {
+      "sha512": "Wz+IgL2xpg8KJ4i2VWj6uz1PmZNu4Q0Ljlwd73P9Vze5NcOBtctLii3itV0PB2MpOqwqDEGfB6RCdv94A4E5yQ==",
+      "type": "package",
+      "path": "system.security.cryptography.pkcs/10.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net10.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net462/System.Security.Cryptography.Pkcs.dll",
+        "lib/net462/System.Security.Cryptography.Pkcs.xml",
+        "lib/net8.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net8.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/net9.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/net9.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
+        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net10.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.xml",
+        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll",
+        "runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.xml",
+        "system.security.cryptography.pkcs.10.0.14.nupkg.sha512",
+        "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Security.Cryptography.Xml/10.0.14": {
+      "sha512": "qpDILpfJvj65+Pvpf5drWq2+mRNSrPffJsRYVQjBmEky+V34W+w2LXDZShq0miitf5qAPKuMAQ3CUaifaS2rrw==",
+      "type": "package",
+      "path": "system.security.cryptography.xml/10.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.Xml.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Xml.targets",
+        "lib/net10.0/System.Security.Cryptography.Xml.dll",
+        "lib/net10.0/System.Security.Cryptography.Xml.xml",
+        "lib/net462/System.Security.Cryptography.Xml.dll",
+        "lib/net462/System.Security.Cryptography.Xml.xml",
+        "lib/net8.0/System.Security.Cryptography.Xml.dll",
+        "lib/net8.0/System.Security.Cryptography.Xml.xml",
+        "lib/net9.0/System.Security.Cryptography.Xml.dll",
+        "lib/net9.0/System.Security.Cryptography.Xml.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Xml.xml",
+        "system.security.cryptography.xml.10.0.14.nupkg.sha512",
+        "system.security.cryptography.xml.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.ServiceModel.Http/8.1.1": {
+      "sha512": "OArC2JVvd4bOzWaBBcEy6RnLdeH+DaOJ5wzbZc5DpSSpwMmgADIEkP6bDjJEVfGVuNjlgvI08GsRpSO6Q+9Jmg==",
+      "type": "package",
+      "path": "system.servicemodel.http/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.ServiceModel.Http.dll",
+        "lib/net462/System.ServiceModel.Http.pdb",
+        "lib/net8.0/System.ServiceModel.Http.dll",
+        "lib/net8.0/System.ServiceModel.Http.pdb",
+        "lib/net8.0/cs/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/de/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/es/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/fr/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/it/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/ja/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/ko/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/pl/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/pt-BR/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/ru/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/tr/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/zh-Hans/System.ServiceModel.Http.resources.dll",
+        "lib/net8.0/zh-Hant/System.ServiceModel.Http.resources.dll",
+        "lib/netstandard2.0/System.ServiceModel.Http.dll",
+        "lib/netstandard2.0/System.ServiceModel.Http.pdb",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/net462/System.ServiceModel.Http.dll",
+        "ref/net8.0/System.ServiceModel.Http.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/System.ServiceModel.Http.dll",
+        "system.servicemodel.http.8.1.1.nupkg.sha512",
+        "system.servicemodel.http.nuspec"
+      ]
+    },
+    "System.ServiceModel.Primitives/8.1.1": {
+      "sha512": "v+jwURtpzg1eI5RDARP9AAQg5GmtNu6rWAOVTauL74cB8jcuP6DB8PVpz1IPTRavX6qlFAKkS+X+9QR5S84QyA==",
+      "type": "package",
+      "path": "system.servicemodel.primitives/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.ServiceModel.Duplex.dll",
+        "lib/net462/System.ServiceModel.Duplex.pdb",
+        "lib/net462/System.ServiceModel.Primitives.dll",
+        "lib/net462/System.ServiceModel.Primitives.pdb",
+        "lib/net462/System.ServiceModel.Security.dll",
+        "lib/net462/System.ServiceModel.Security.pdb",
+        "lib/net8.0/System.ServiceModel.Duplex.dll",
+        "lib/net8.0/System.ServiceModel.Duplex.pdb",
+        "lib/net8.0/System.ServiceModel.Primitives.dll",
+        "lib/net8.0/System.ServiceModel.Primitives.pdb",
+        "lib/net8.0/System.ServiceModel.Security.dll",
+        "lib/net8.0/System.ServiceModel.Security.pdb",
+        "lib/net8.0/System.ServiceModel.dll",
+        "lib/net8.0/System.ServiceModel.pdb",
+        "lib/net8.0/cs/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/de/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/es/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/fr/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/it/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/ja/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/ko/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/pl/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/pt-BR/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/ru/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/tr/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/zh-Hans/System.ServiceModel.Primitives.resources.dll",
+        "lib/net8.0/zh-Hant/System.ServiceModel.Primitives.resources.dll",
+        "lib/netstandard2.0/System.ServiceModel.Duplex.dll",
+        "lib/netstandard2.0/System.ServiceModel.Duplex.pdb",
+        "lib/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "lib/netstandard2.0/System.ServiceModel.Primitives.pdb",
+        "lib/netstandard2.0/System.ServiceModel.Security.dll",
+        "lib/netstandard2.0/System.ServiceModel.Security.pdb",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/net462/System.ServiceModel.Primitives.dll",
+        "ref/net8.0/System.ServiceModel.Primitives.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/System.ServiceModel.Primitives.dll",
+        "system.servicemodel.primitives.8.1.1.nupkg.sha512",
+        "system.servicemodel.primitives.nuspec"
+      ]
+    },
+    "System.Text.Json/10.0.14": {
+      "sha512": "JSSLGJTJJDvS76VnLdY1X289rFcHuYApk7QGw0hCoP5wVR1mk7BvJbOYxQLXq4x1qK/Ml9OHa/AKaAbBVCfSSQ==",
+      "type": "package",
+      "path": "system.text.json/10.0.14",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/System.Text.Json.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/System.Text.Json.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/System.Text.Json.SourceGeneration.resources.dll",
+        "buildTransitive/net461/System.Text.Json.targets",
+        "buildTransitive/net462/System.Text.Json.targets",
+        "buildTransitive/net8.0/System.Text.Json.targets",
+        "buildTransitive/netcoreapp2.0/System.Text.Json.targets",
+        "buildTransitive/netstandard2.0/System.Text.Json.targets",
+        "lib/net10.0/System.Text.Json.dll",
+        "lib/net10.0/System.Text.Json.xml",
+        "lib/net462/System.Text.Json.dll",
+        "lib/net462/System.Text.Json.xml",
+        "lib/net8.0/System.Text.Json.dll",
+        "lib/net8.0/System.Text.Json.xml",
+        "lib/net9.0/System.Text.Json.dll",
+        "lib/net9.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.10.0.14.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "System.Security.Cryptography.Pkcs >= 10.0.14",
+      "System.Security.Cryptography.Xml >= 10.0.14",
+      "System.ServiceModel.Http >= 8.1.1",
+      "System.ServiceModel.Primitives >= 8.1.1",
+      "System.Text.Json >= 10.0.14"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\volub\\.nuget\\packages\\": {},
@@ -44,6 +499,9 @@
         }
       },
       "warningProperties": {
+        "noWarn": [
+          "NU1510"
+        ],
         "warnAsError": [
           "NU1605"
         ]
@@ -59,6 +517,28 @@
       "net10.0": {
         "framework": "net10.0",
         "targetAlias": "net10.0",
+        "dependencies": {
+          "System.Security.Cryptography.Pkcs": {
+            "target": "Package",
+            "version": "[10.0.14, )"
+          },
+          "System.Security.Cryptography.Xml": {
+            "target": "Package",
+            "version": "[10.0.14, )"
+          },
+          "System.ServiceModel.Http": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
+          "System.ServiceModel.Primitives": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
+          "System.Text.Json": {
+            "target": "Package",
+            "version": "[10.0.14, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

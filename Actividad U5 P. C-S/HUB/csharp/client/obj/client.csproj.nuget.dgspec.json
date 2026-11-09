@@ -37,6 +37,9 @@
           }
         },
         "warningProperties": {
+          "noWarn": [
+            "NU1510"
+          ],
           "warnAsError": [
             "NU1605"
           ]
@@ -52,6 +55,28 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "System.Security.Cryptography.Pkcs": {
+              "target": "Package",
+              "version": "[10.0.14, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[10.0.14, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "System.ServiceModel.Primitives": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[10.0.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

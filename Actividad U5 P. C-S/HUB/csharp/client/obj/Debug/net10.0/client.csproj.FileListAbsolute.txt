@@ -1,0 +1,6 @@
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.csproj.AssemblyReference.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.AssemblyInfoInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.AssemblyInfo.cs
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.csproj.CoreCompileInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\csharp\client\obj\Debug\net10.0\client.sourcelink.json

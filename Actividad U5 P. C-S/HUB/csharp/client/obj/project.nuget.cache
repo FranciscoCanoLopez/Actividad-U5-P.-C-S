@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "wvEp9Pl8l3I=",
+  "dgSpecHash": "T2OKab4fonU=",
   "success": true,
   "projectFilePath": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\csharp\\client\\client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\volub\\.nuget\\packages\\microsoft.extensions.objectpool\\8.0.10\\microsoft.extensions.objectpool.8.0.10.nupkg.sha512",
+    "C:\\Users\\volub\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.14\\system.security.cryptography.pkcs.10.0.14.nupkg.sha512",
+    "C:\\Users\\volub\\.nuget\\packages\\system.security.cryptography.xml\\10.0.14\\system.security.cryptography.xml.10.0.14.nupkg.sha512",
+    "C:\\Users\\volub\\.nuget\\packages\\system.servicemodel.http\\8.1.1\\system.servicemodel.http.8.1.1.nupkg.sha512",
+    "C:\\Users\\volub\\.nuget\\packages\\system.servicemodel.primitives\\8.1.1\\system.servicemodel.primitives.8.1.1.nupkg.sha512",
+    "C:\\Users\\volub\\.nuget\\packages\\system.text.json\\10.0.14\\system.text.json.10.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
