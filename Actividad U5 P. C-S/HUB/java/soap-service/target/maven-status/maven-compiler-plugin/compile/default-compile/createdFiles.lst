@@ -1,0 +1,4 @@
+com\hub\soap\ShipmentResponse.class
+com\hub\soap\ShipmentService.class
+com\hub\soap\ShipmentServiceImpl.class
+com\hub\soap\HubSoapApplication.class

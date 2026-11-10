@@ -1,0 +1,16 @@
+classpath:C:\Users\volub\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\4.0.1\jakarta.xml.ws-api-4.0.1.jar	75282:1697475691000
+classpath:C:\Users\volub\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar	130002:1694583425000
+classpath:C:\Users\volub\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.1\jakarta.xml.soap-api-3.0.1.jar	38036:1697216417000
+classpath:C:\Users\volub\.m2\repository\com\sun\xml\ws\jaxws-rt\4.0.2\jaxws-rt-4.0.2.jar	2709186:1697572050000
+classpath:C:\Users\volub\.m2\repository\com\sun\xml\bind\jaxb-impl\4.0.4\jaxb-impl-4.0.4.jar	923208:1697446192000
+classpath:C:\Users\volub\.m2\repository\com\sun\xml\bind\jaxb-core\4.0.4\jaxb-core-4.0.4.jar	235412:1697446190000
+classpath:C:\Users\volub\.m2\repository\org\glassfish\ha\ha-api\3.1.13\ha-api-3.1.13.jar	50337:1617721368000
+classpath:C:\Users\volub\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar	48189:1588878894000
+classpath:C:\Users\volub\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.3\gmbal-api-only-4.0.3.jar	28597:1617823747000
+classpath:C:\Users\volub\.m2\repository\org\jvnet\staxex\stax-ex\2.1.0\stax-ex-2.1.0.jar	38872:1645099832000
+classpath:C:\Users\volub\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.1.0\streambuffer-2.1.0.jar	74832:1645100543000
+classpath:C:\Users\volub\.m2\repository\org\jvnet\mimepull\mimepull\1.10.0\mimepull-1.10.0.jar	65576:1649749571000
+classpath:C:\Users\volub\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.1.0\FastInfoset-2.1.0.jar	316318:1645103760000
+classpath:C:\Users\volub\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.2\jakarta.mail-api-2.1.2.jar	236498:1683028629000
+classpath:C:\Users\volub\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar	66096:1682590051000
+classpath:C:\Users\volub\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar	26141:1655206218000

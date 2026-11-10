@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.omnilogistics.soap</groupId>
-    <artifactId>java-soap-service</artifactId>
+    <groupId>com.hub</groupId>
+    <artifactId>soap-service</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -15,27 +15,30 @@
     </properties>
 
     <dependencies>
-        <!-- Jakarta XML WS API -->
+        <!-- Jakarta XML Web Services API -->
         <dependency>
             <groupId>jakarta.xml.ws</groupId>
             <artifactId>jakarta.xml.ws-api</artifactId>
             <version>4.0.1</version>
         </dependency>
-
-        <!-- Implementation Metro JAX-WS -->
+        <!-- JAX-WS Reference Implementation (Metro) -->
         <dependency>
             <groupId>com.sun.xml.ws</groupId>
             <artifactId>jaxws-rt</artifactId>
             <version>4.0.2</version>
         </dependency>
     </dependencies>
-
+    
     <build>
         <plugins>
+            <!-- Plugin para ejecutar la clase Main desde Maven -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <mainClass>com.hub.soap.HubSoapApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>

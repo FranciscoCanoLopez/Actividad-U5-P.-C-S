@@ -1,0 +1,7 @@
+com\hub\rest\JwtFilter.class
+com\hub\rest\LoginRequest.class
+com\hub\rest\ShipmentResponse.class
+com\hub\rest\HubController.class
+com\hub\rest\SecurityConfig.class
+com\hub\rest\HubRestApplication.class
+com\hub\rest\AuthResponse.class
