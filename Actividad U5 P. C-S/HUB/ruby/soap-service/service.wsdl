@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ShipmentService"
+    targetNamespace="http://hub.local/services"
+    xmlns:tns="http://hub.local/services"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+    <types>
+        <xsd:schema targetNamespace="http://hub.local/services">
+            <xsd:element name="getShipmentStatus">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="trackingNumber" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getShipmentStatusResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="trackingNumber" type="xsd:string"/>
+                        <xsd:element name="status" type="xsd:string"/>
+                        <xsd:element name="updatedAt" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+
+    <message name="getShipmentStatusRequest">
+        <part name="parameters" element="tns:getShipmentStatus"/>
+    </message>
+    <message name="getShipmentStatusResponse">
+        <part name="parameters" element="tns:getShipmentStatusResponse"/>
+    </message>
+
+    <portType name="ShipmentPortType">
+        <operation name="getShipmentStatus">
+            <input message="tns:getShipmentStatusRequest"/>
+            <output message="tns:getShipmentStatusResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="ShipmentBinding" type="tns:ShipmentPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="getShipmentStatus">
+            <soap:operation soapAction="http://hub.local/services/getShipmentStatus"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+
+    <service name="ShipmentService">
+        <port name="ShipmentPort" binding="tns:ShipmentBinding">
+            <soap:address location="http://localhost:8086/ShipmentService"/>
+        </port>
+    </service>
+</definitions>
