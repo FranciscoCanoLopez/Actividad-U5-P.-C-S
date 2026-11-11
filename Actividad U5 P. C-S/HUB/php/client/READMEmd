@@ -1,0 +1,19 @@
+# PHP Client - Hub
+
+Este directorio contiene la aplicación de consola desarrollada en **PHP 8** que actúa como cliente unificado para consumir la arquitectura dual del Hub.
+
+## Interacciones del Cliente
+
+1. **Consumo REST (Puerto 8083):** 
+   Utiliza la extensión **cURL** de PHP para negociar un token de seguridad JWT contra el endpoint de autenticación y posteriormente consultar el catálogo de envíos a través de una petición HTTP GET autenticada. La respuesta JSON se procesa nativamente con `json_decode`.
+2. **Consumo SOAP (Puerto 8084):** 
+   Utiliza la clase nativa **`SoapClient`** de PHP. Lee el descriptor WSDL dinámicamente y mapea el arreglo de parámetros locales a una petición XML válida, abstrayendo por completo la complejidad de construir el sobre SOAP manualmente.
+
+## Requisitos y Ejecución
+
+Es estrictamente necesario que los microservicios REST (8083) y SOAP (8084) de PHP se encuentren en ejecución simultánea antes de lanzar este script.
+
+Para ejecutar el cliente, abre una terminal en este directorio y utiliza:
+
+```bash
+php client.php

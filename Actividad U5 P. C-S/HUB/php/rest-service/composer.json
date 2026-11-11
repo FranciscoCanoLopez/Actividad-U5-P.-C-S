@@ -1,8 +1,9 @@
 {
+    "name": "hub/php-rest-service",
+    "description": "Hub REST Service in PHP",
     "require": {
-        "slim/slim": "4.*",
-        "slim/psr7": "^1.8",
-        "firebase/php-jwt": "^7.2",
-        "zircote/swagger-php": "^7.3"
+        "slim/slim": "^4.12",
+        "slim/psr7": "^1.6",
+        "firebase/php-jwt": "^7.2"
     }
 }
