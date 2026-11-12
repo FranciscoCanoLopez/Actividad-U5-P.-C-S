@@ -28,6 +28,8 @@ goto MENU
 :REST
 echo Iniciando Hub REST Service...
 start "Hub - C# REST Service" cmd /k "title Hub-REST (5001) && cd rest-service && dotnet run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:5001/swagger"
 goto MENU
 
 :SOAP
@@ -43,6 +45,8 @@ goto MENU
 :ALL
 echo Iniciando infraestructura completa del Hub...
 start "Hub - C# REST Service" cmd /k "title Hub-REST (5001) && cd rest-service && dotnet run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:5001/swagger"
 start "Hub - C# SOAP Service" cmd /k "title Hub-SOAP (5002) && cd soap-service && dotnet run"
 
 echo.

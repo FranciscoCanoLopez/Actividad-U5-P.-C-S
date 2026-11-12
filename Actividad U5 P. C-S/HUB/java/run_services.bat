@@ -28,6 +28,8 @@ goto MENU
 :REST
 echo Iniciando Hub REST Service (Spring Boot)...
 start "Hub - Java REST (8081)" cmd /k "title Hub-Java-REST (8081) && cd rest-service && mvn clean spring-boot:run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8081/swagger-ui.html"
 goto MENU
 
 :SOAP
@@ -43,6 +45,8 @@ goto MENU
 :ALL
 echo Iniciando infraestructura completa del Hub (Java)...
 start "Hub - Java REST (8081)" cmd /k "title Hub-Java-REST (8081) && cd rest-service && mvn clean spring-boot:run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8081/swagger-ui.html"
 start "Hub - Java SOAP (8082)" cmd /k "title Hub-Java-SOAP (8082) && cd soap-service && mvn clean compile exec:java"
 
 echo.

@@ -28,6 +28,8 @@ goto MENU
 :REST
 echo Iniciando Hub REST Service (FastAPI)...
 start "Hub - Python REST (8000)" cmd /k "title Hub-Python-REST (8000) && cd rest-service && python -m uvicorn main:app --host 127.0.0.1 --port 8000"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8000/docs"
 goto MENU
 
 :SOAP
@@ -43,6 +45,8 @@ goto MENU
 :ALL
 echo Iniciando infraestructura completa del Hub (Python)...
 start "Hub - Python REST (8000)" cmd /k "title Hub-Python-REST (8000) && cd rest-service && python -m uvicorn main:app --host 127.0.0.1 --port 8000"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8000/docs"
 start "Hub - Python SOAP (8005)" cmd /k "title Hub-Python-SOAP (8005) && cd soap-service && python main.py"
 
 echo.

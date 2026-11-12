@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Python Hub REST Service API
+  version: "1.0"
+  description: API REST generada automáticamente para el servicio Python (FastAPI) del proyecto HUB.
+servers:
+  - url: http://localhost:8000
+paths:
+  /api/v1/auth/login:
+    post:
+      summary: Obtener token JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+              required:
+                - username
+                - password
+      responses:
+        "200":
+          description: Token emitido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        "401":
+          description: Credenciales inválidas
+  /api/v1/shipments:
+    get:
+      summary: Listar envíos (protegido)
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Lista de envíos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Shipment'
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Shipment:
+      type: object
+      properties:
+        tracking_number:
+          type: string
+        origin:
+          type: string
+        destination:
+          type: string
+        weight_kg:
+          type: number
+        declared_value:
+          type: number
+        status:
+          type: string
+        created_at:
+          type: string
+        updated_at:
+          type: string

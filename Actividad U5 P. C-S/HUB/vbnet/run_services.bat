@@ -26,6 +26,8 @@ goto MENU
 
 :REST
 start "Hub - VBNET REST (5003)" cmd /k "title Hub-VBNET-REST (5003) && cd rest-service && dotnet run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:5003/swagger"
 goto MENU
 
 :SOAP
@@ -38,6 +40,8 @@ goto MENU
 
 :ALL
 start "Hub - VBNET REST (5003)" cmd /k "title Hub-VBNET-REST (5003) && cd rest-service && dotnet run"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:5003/swagger"
 start "Hub - VBNET SOAP (5004)" cmd /k "title Hub-VBNET-SOAP (5004) && cd soap-service && dotnet run"
 timeout /t 6 >nul
 start "Hub - VBNET Client" cmd /k "title Hub-VBNET-Client && cd client && dotnet run"

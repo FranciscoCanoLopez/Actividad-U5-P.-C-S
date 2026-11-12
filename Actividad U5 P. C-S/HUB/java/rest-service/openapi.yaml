@@ -1,0 +1,110 @@
+openapi: 3.0.3
+info:
+  title: Java Hub REST Service API
+  version: "1.0"
+  description: API REST generada automáticamente para el servicio Java (Spring Boot) del proyecto HUB.
+servers:
+  - url: http://localhost:8080
+paths:
+  /items:
+    get:
+      summary: Obtener lista de ítems
+      security:
+        - BearerAuth: []
+      responses:
+        "200":
+          description: Lista de ítems
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+    post:
+      summary: Crear un nuevo ítem
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemCreate'
+      responses:
+        "201":
+          description: Ítem creado
+  /items/{id}:
+    get:
+      summary: Obtener ítem por ID
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Ítem encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+    put:
+      summary: Reemplazar ítem completo
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemCreate'
+      responses:
+        "200":
+          description: Ítem actualizado
+    delete:
+      summary: Eliminar ítem
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Ítem eliminado
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+    ItemCreate:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+        description:
+          type: string

@@ -28,6 +28,8 @@ goto MENU
 :REST
 echo Iniciando Hub REST Service (Sinatra)...
 start "Hub - Ruby REST (8085)" cmd /k "title Hub-Ruby-REST (8085) && cd rest-service && ruby app.rb"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8085/swagger"
 goto MENU
 
 :SOAP
@@ -43,6 +45,8 @@ goto MENU
 :ALL
 echo Iniciando infraestructura completa del Hub (Ruby)...
 start "Hub - Ruby REST (8085)" cmd /k "title Hub-Ruby-REST (8085) && cd rest-service && ruby app.rb"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8085/swagger"
 start "Hub - Ruby SOAP (8086)" cmd /k "title Hub-Ruby-SOAP (8086) && cd soap-service && ruby app.rb"
 
 echo.

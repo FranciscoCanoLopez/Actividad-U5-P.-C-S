@@ -30,7 +30,52 @@ Namespace RestService
                              End Sub)
             builder.Services.AddAuthorization()
 
-            Dim app = builder.Build()
+            Imports Microsoft.OpenApi.Models
+
+    ' Configuración Swagger para VB.NET (similar a C#)
+    builder.Services.AddEndpointsApiExplorer()
+    builder.Services.AddSwaggerGen(Sub(c)
+        c.SwaggerDoc("v1", New OpenApiInfo With {.Title = "OmniLogistics VB.NET REST API", .Version = "v1"})
+        ' Seguridad JWT
+        c.AddSecurityDefinition("Bearer", New OpenApiSecurityScheme With {
+            .Description = "Encabezado de autorización JWT usando el esquema Bearer.",
+            .Name = "Authorization",
+            .In = ParameterLocation.Header,
+            .Type = SecuritySchemeType.Http,
+            .Scheme = "bearer",
+            .BearerFormat = "JWT"
+        })
+        c.AddSecurityRequirement(New OpenApiSecurityRequirement From {
+            { New OpenApiSecuritySchemeReference("Bearer"), New List(Of String)() }
+        })
+    End Sub)
+
+    Dim app = builder.Build()
+
+    ' Habilitar Swagger UI
+    app.UseSwagger()
+    app.UseSwaggerUI(Sub(c)
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "OmniLogistics VB.NET REST API v1")
+    End Sub)
+
+    app.UseCors(Sub(policy) policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader())
+
+    app.UseAuthentication()
+    app.UseAuthorization()
+
+    app.MapPost("/api/v1/auth/login", Function(context As HttpContext) As IResult
+        Return LoginHandler(context, jwtSecret)
+    End Function)
+
+    app.MapGet("/api/v1/shipments", Function() As IResult
+        Return Results.Ok(database)
+    End Function).RequireAuthorization()
+
+    Console.WriteLine("=========================================")
+    Console.WriteLine(" HUB - VB.NET REST Service (Kestrel)")
+    Console.WriteLine(" Escuchando en http://localhost:5003")
+    Console.WriteLine("=========================================")
+    app.Run()
             app.UseAuthentication()
             app.UseAuthorization()
 

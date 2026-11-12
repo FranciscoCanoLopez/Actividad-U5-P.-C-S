@@ -28,6 +28,8 @@ goto MENU
 :REST
 echo Iniciando Hub REST Service (Slim Framework)...
 start "Hub - PHP REST (8083)" cmd /k "title Hub-PHP-REST (8083) && cd rest-service && php -S localhost:8083 -t public"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8083/swagger"
 goto MENU
 
 :SOAP
@@ -43,6 +45,8 @@ goto MENU
 :ALL
 echo Iniciando infraestructura completa del Hub (PHP)...
 start "Hub - PHP REST (8083)" cmd /k "title Hub-PHP-REST (8083) && cd rest-service && php -S localhost:8083 -t public"
+rem Abrir Swagger UI en el navegador
+start "" "http://localhost:8083/swagger"
 start "Hub - PHP SOAP (8084)" cmd /k "title Hub-PHP-SOAP (8084) && cd soap-service && php -S localhost:8084"
 
 echo.
