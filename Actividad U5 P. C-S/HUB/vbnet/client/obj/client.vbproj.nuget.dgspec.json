@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\client.vbproj": {}
+    "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\Client.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\client.vbproj": {
+    "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\Client.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\client.vbproj",
-        "projectName": "client",
-        "projectPath": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\client.vbproj",
+        "projectUniqueName": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\Client.vbproj",
+        "projectName": "Client",
+        "projectPath": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\Client.vbproj",
         "packagesPath": "C:\\Users\\volub\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\volub\\source\\repos\\Actividad U5 P. C-S\\Actividad U5 P. C-S\\HUB\\vbnet\\client\\obj\\",
         "projectStyle": "PackageReference",

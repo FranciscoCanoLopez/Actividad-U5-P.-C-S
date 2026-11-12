@@ -1,0 +1,15 @@
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\bin\Debug\net10.0\Client.exe
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\bin\Debug\net10.0\Client.deps.json
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\bin\Debug\net10.0\Client.runtimeconfig.json
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\bin\Debug\net10.0\Client.dll
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\bin\Debug\net10.0\Client.pdb
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.AssemblyInfoInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.AssemblyInfo.vb
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.vbproj.CoreCompileInputs.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.sourcelink.json
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.dll
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\refint\Client.dll
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.pdb
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\Client.genruntimeconfig.cache
+C:\Users\volub\source\repos\Actividad U5 P. C-S\Actividad U5 P. C-S\HUB\vbnet\client\obj\Debug\net10.0\ref\Client.dll
