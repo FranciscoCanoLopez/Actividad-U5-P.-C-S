@@ -1,5 +1,24 @@
 # OmniLogistics Hub - Núcleo de Servicios Web
 
+Este directorio contiene la implementación multi‑lenguaje de la plataforma de logística global **OmniLogistics**. Cada lenguaje ofrece un **servicio RESTful**, un **servicio SOAP** y una **aplicación cliente** que consume ambos.
+
+## Estructura de Subdirectorios
+
+| Lenguaje | REST (puerto) | SOAP (puerto) | Cliente | Docs (Swagger / WSDL) |
+|----------|---------------|---------------|---------|-----------------------|
+| `csharp` | 5001 | 5002 | `client` | <http://localhost:5001/swagger>
+| `vbnet`  | 5003 | 5004 | `client` | <http://localhost:5003/swagger>
+| `java`   | 8081 | 8082 | `client` | <http://localhost:8081/swagger-ui.html>
+| `python` | 8000 | 8005 | `client` | <http://localhost:8000/docs>
+| `php`    | 8083 | 8084 | `client` | <http://localhost:8083/swagger>
+| `ruby`   | 8085 | 8086 | `client` | <http://localhost:8085/swagger>
+
+Cada sub‑directorio contiene un `README.md` con instrucciones detalladas de uso (inicio, pruebas y generación de documentación).
+
+---
+
+[Ver la guía completa de cada módulo](csharp/README.md)
+
 Este directorio contiene la implementación multi-lenguaje de la plataforma de logística global OmniLogistics. Contiene 12 servidores web (6 RESTful y 6 SOAP) y sus respectivas aplicaciones cliente.
 
 ## Estructura de Subdirectorios

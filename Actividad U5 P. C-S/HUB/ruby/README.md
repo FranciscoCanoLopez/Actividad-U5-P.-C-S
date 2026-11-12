@@ -1,25 +1,26 @@
-# Hub - Módulo Ruby (Sinatra)
+# Ruby Hub Module
 
-Este directorio contiene la implementación en Ruby del Hub, integrando una arquitectura dual de microservicios para garantizar la interoperabilidad entre servicios web modernos (REST) y corporativos heredados (SOAP).
+## Overview
+Este módulo implementa los servicios **REST** (Sinatra) y **SOAP** (Sinatra + Nokogiri) y un cliente de consola.
 
-## Estructura del Ecosistema
+## REST Service
+- **Puerto:** `8085`
+- **Inicio:** Ejecuta `run_services.bat` → opción **1** o `ruby app.rb` dentro de `rest-service`.
+- **Swagger UI:** <http://localhost:8085/swagger>
+- **JWT:** HS256 configurado en `app.rb`.
 
-El módulo está compuesto por tres subproyectos independientes, gestionados con Bundler:
+## SOAP Service
+- **Puerto:** `8086`
+- **Inicio:** `run_services.bat` → opción **2** o `ruby app.rb` dentro de `soap-service`.
+- **WSDL:** <http://localhost:8086/wsdl>
 
-1. **`rest-service` (Puerto 8085):**
-   * Servidor basado en el micro-framework **Sinatra** corriendo sobre el servidor web **Puma**.
-   * Expone endpoints RESTful con serialización JSON.
-   * Cuenta con seguridad mediante tokens JWT (HS256) gestionada por la gema `jwt`.
+## Client
+- **Inicio:** `run_services.bat` → opción **3** o `ruby client.rb` dentro de `client`.
+- El cliente autentica contra `/api/v1/auth/login` y consume ambos servicios.
 
-2. **`soap-service` (Puerto 8086):**
-   * Servidor basado en **Sinatra** y **Puma**.
-   * Expone contratos de datos XML tipados a través de un archivo WSDL estático (`service.wsdl`).
-   * Procesa peticiones y construye respuestas SOAP utilizando la gema **Nokogiri** para la manipulación y análisis de XML.
+## Prerequisitos
+- Ruby 3.2+ y Bundler.
+- Ejecutar `bundle install` dentro de `rest-service` y `soap-service`.
 
-3. **`client` (Cliente de Consola Híbrido):**
-   * Script unificado de pruebas utilizando `Net::HTTP` y `Nokogiri`.
-   * Demuestra la capacidad del ecosistema Ruby para actuar tanto como proveedor de servicios (API/SOAP) como consumidor cliente.
-
-## Gestión y Ejecución
-
-Para facilitar el levantamiento de los servicios, se incluye el script automatizado `run_services.bat` en la raíz de este directorio, permitiendo arrancar los servidores y el cliente de forma individual o integral en ventanas de comandos separadas.
+---
+[Volver al índice del HUB](../README.md)

@@ -1,27 +1,26 @@
-# Hub - Módulo PHP (Slim + ext-soap)
+# PHP Hub Module
 
-Este directorio contiene la implementación en PHP del Hub, integrando una arquitectura dual de microservicios para garantizar la interoperabilidad entre servicios web modernos (REST) y corporativos heredados (SOAP).
+## Overview
+Este módulo contiene los servicios **REST** (Slim) y **SOAP** (ext‑soap) junto con una aplicación cliente.
 
-## Estructura del Ecosistema
+## REST Service
+- **Puerto:** `8083`
+- **Inicio:** Ejecuta `run_services.bat` → opción **1** o `php -S localhost:8083 -t public` dentro de `rest-service`.
+- **Swagger UI:** <http://localhost:8083/swagger>
+- **JWT:** HS256 configurado en `index.php`.
 
-El módulo está compuesto por tres subproyectos independientes compatibles con PHP 8:
+## SOAP Service
+- **Puerto:** `8084`
+- **Inicio:** `run_services.bat` → opción **2** o `php -S localhost:8084` dentro de `soap-service`.
+- **WSDL:** <http://localhost:8084/service.wsdl>
 
-1. **`rest-service` (Puerto 8083):**
-   * Servidor basado en el micro-framework **Slim 4**.
-   * Expone endpoints RESTful con serialización JSON.
-   * Cuenta con seguridad mediante tokens JWT (HS256) gestionada por `firebase/php-jwt`.
-   * Dependencias gestionadas vía Composer.
+## Client
+- **Inicio:** `run_services.bat` → opción **3** o `php client.php` dentro de `client`.
+- El cliente solicita un token y consume ambos servicios.
 
-2. **`soap-service` (Puerto 8084):**
-   * Servidor nativo utilizando la extensión **`ext-soap`** (`SoapServer`).
-   * Expone contratos de datos XML tipados a través de un archivo WSDL estático (`service.wsdl`).
-   * No requiere frameworks adicionales.
+## Prerequisitos
+- PHP 8.2+ con la extensión **soap** habilitada.
+- Composer instalado (`composer install`).
 
-3. **`client` (Cliente de Consola Híbrido):**
-   * Script unificado de pruebas.
-   * Utiliza **cURL** para consumir la autenticación y endpoints REST.
-   * Utiliza **`SoapClient`** para parsear el WSDL y consumir el servicio SOAP de manera orientada a objetos.
-
-## Gestión y Ejecución
-
-Para facilitar el levantamiento de los servicios, se incluye el script automatizado `run_services.bat` en la raíz de este directorio, permitiendo arrancar los servidores (utilizando el servidor web interno de PHP CLI) y el cliente de forma individual o integral en ventanas de comandos separadas.
+---
+[Volver al índice del HUB](../README.md)

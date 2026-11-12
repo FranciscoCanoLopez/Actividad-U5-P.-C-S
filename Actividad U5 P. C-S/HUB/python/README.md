@@ -1,27 +1,26 @@
-# Hub - Módulo Python (FastAPI + Spyne)
+# Python Hub Module
 
-Este directorio contiene la implementación en Python del Hub, integrando una arquitectura dual de microservicios para garantizar la interoperabilidad entre servicios web modernos (REST) y corporativos heredados (SOAP).
+## Overview
+Este módulo implementa los servicios **REST** (FastAPI) y **SOAP** (Spyne) y un cliente de consola.
 
-## Estructura del Ecosistema
+## REST Service
+- **Puerto:** `8000`
+- **Inicio:** Ejecuta `run_services.bat` → opción **1** o `python -m uvicorn main:app --host 127.0.0.1 --port 8000` dentro de `rest-service`.
+- **Swagger UI:** <http://localhost:8000/docs>
+- **JWT:** HS256 usando la clave definida en `main.py`.
 
-El módulo está compuesto por tres subproyectos independientes:
+## SOAP Service
+- **Puerto:** `8005`
+- **Inicio:** `run_services.bat` → opción **2** o `python main.py` dentro de `soap-service`.
+- **WSDL:** <http://localhost:8005/?wsdl>
 
-1. **`rest-service` (Puerto 8000):**
-   * Servidor ASGI basado en **FastAPI** y **Uvicorn**.
-   * Expone endpoints RESTful con serialización JSON.
-   * Cuenta con seguridad mediante tokens JWT (`pyjwt`).
-   * Incluye documentación interactiva nativa en `/docs`.
+## Client
+- **Inicio:** `run_services.bat` → opción **3** o `python main.py` dentro de `client`.
+- El cliente solicita un token y consume ambos servicios.
 
-2. **`soap-service` (Puerto 8005):**
-   * Servidor WSGI basado en **Spyne** y **Werkzeug**.
-   * Expone contratos de datos XML tipados y el descriptor WSDL (`/?wsdl`).
-   * Implementa un parche de compatibilidad dinámico optimizado para soportar entornos de ejecución recientes (Python 3.14+).
+## Prerequisitos
+- Python 3.11+ y virtualenv.
+- Instalar dependencias con `pip install -r requirements.txt`.
 
-3. **`client` (Cliente de Consola Híbrido):**
-   * Script unificado de pruebas.
-   * Utiliza la librería `requests` para consumir la autenticación y endpoints REST.
-   * Utiliza la librería `zeep` para parsear dinámicamente el WSDL y consumir el servicio SOAP mediante llamadas RPC.
-
-## Gestión y Ejecución
-
-Para facilitar el levantamiento de los servicios, se incluye el script automatizado `run_services.bat` en la raíz de este directorio, permitiendo arrancar los servidores y el cliente de forma individual o integral en ventanas de comandos separadas.
+---
+[Volver al índice del HUB](../README.md)
